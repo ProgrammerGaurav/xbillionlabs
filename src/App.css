@@ -1,38 +1,68 @@
-.App {
-  text-align: center;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	height: 100vh;
+}
+.filter .buttons {
+	margin-left: auto;
+}
+.filter .card {
+	padding: 10px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.chats .card {
+	height: 500px;
+	overflow-y: scroll;
+	cursor: pointer;
+}
+.chats .card {
+	position: relative;
+}
+.chats .card .input {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.chatbox {
+	padding: 0 5px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	padding-bottom: 80px;
+	overflow: scroll;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.chatbox .chatboxcontainer {
+	margin: 10px 0;
 }
-
-.App-link {
-  color: #61dafb;
+.chatbox .messege {
+	display: inline-block;
+	padding: 5px 10px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.chatbox .date {
+	font-size: 10px;
+	opacity: 0.8;
+	margin-top: -4px;
+}
+.chatbox .send-btn {
+	cursor: pointer;
+}
+.chatbox .send-btn-dis {
+	opacity: 0.6;
+	cursor: default;
+}
+.chatbox .solved-btn {
+	margin-left: auto;
+	max-width: 180px;
+	background-color: #dfdfdf;
+	color: #000;
+	border-radius: 50px;
+}
+.chatbox .solved-btn:hover {
+	background-color: #dfdfdf;
 }
