@@ -40,6 +40,24 @@ const ChatBox = ({ currentChats, setCurrentChats, profiles, selectedChat }) => {
 				className="input"
 				sx={{ m: 1, width: "25ch" }}
 				onChange={(e) => setMessage(e.target.value)}
+				onKeyPress={(e) => {
+					if (e.key === "Enter") {
+						if (message === "") {
+							return;
+						}
+						setCurrentChats([
+							...currentChats,
+							{
+								chatTypeId: 1,
+								message: message,
+								userType: "user",
+								createdAt: Date(),
+								conversationId: profiles[selectedChat].id,
+							},
+						]);
+						setMessage("");
+					}
+				}}
 				value={message}
 				disabled={disableInput}
 				InputProps={{

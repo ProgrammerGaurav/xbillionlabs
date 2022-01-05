@@ -10,12 +10,12 @@ const Chats = () => {
 	const [currentChats, setCurrentChats] = React.useState([]);
 
 	React.useEffect(() => {
-		fetch("https://pastebin.com/raw/mfjiuntb", {})
+		fetch("https://api.jsonbin.io/b/61d47e2d2675917a6289eb0c")
 			.then((res) => res.json())
 			.then((data) => {
 				setProfiles(data.data.conversations);
 			});
-		fetch("https://pastebin.com/raw/G7bkTyM9", {})
+		fetch("https://api.jsonbin.io/b/61d47e752675917a6289eb3a")
 			.then((res) => res.json())
 			.then((data) => {
 				setChats(data.data.chats);
